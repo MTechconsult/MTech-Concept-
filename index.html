@@ -3,90 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTech Concept Graphic Design</title>
+    <title>MTech Concept</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1f2937; /* Dark background */
+            background-color: #1f2937;
             margin: 0;
             padding: 0;
             text-align: center;
-            color: #e5e7eb; /* Light text color */
+            color: #e5e7eb;
         }
         .container {
             padding: 2em;
         }
         .header-container {
-            background-color: #3b82f6; /* Bright blue background for header */
+            background-color: #3b82f6;
             padding: 2em;
             color: #fff;
             border-radius: 8px;
             margin-bottom: 2em;
         }
-        .header-container h1 {
-            margin: 0;
-        }
-        .content {
-            background-color: #374151; /* Darker background for content */
+        .content, .services-section, .data-services-section {
+            background-color: #374151;
             padding: 2em;
             margin: 2em auto;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
-        .content p {
-            color: #e5e7eb;
-            line-height: 1.6;
-        }
-        .link-wrapper {
-            margin: 20px 0;
-        }
-        .social-links img {
-            width: 32px;
-            height: 32px;
-            vertical-align: middle;
-        }
-        .get-in-touch, .visibility-page {
-            padding: 1em 2em; /* Adjusted padding */
-            border-radius: 8px;
-            color: #fff;
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-            font-size: 1.2em;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .get-in-touch {
-            background-color: #25d366; /* WhatsApp green */
-        }
-        .get-in-touch img, .visibility-page img {
-            width: 32px;
-            height: 32px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .visibility-page {
-            background-color: #3b5998; /* Facebook blue */
-        }
-        .check-section, .click-here-section {
-            margin-bottom: 20px;
-        }
-        .click-here-section {
-            margin-top: 20px;
-        }
-        .data-services-section {
-            background-color: #4b5563; /* Darker gray background for data services */
-            padding: 2em;
-            margin: 2em auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-        }
-        .data-services-section h2 {
-            color: #e5e7eb;
+        h2 {
             margin-top: 0;
         }
-        /* Flip card styling */
+        .get-in-touch {
+            background-color: #25d366;
+            padding: 1em 2em;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .get-in-touch img {
+            width: 28px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        /* SERVICES GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .service-box {
+            background-color: #4b5563;
+            padding: 1.5em;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .service-box h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+        .service-box ul {
+            padding-left: 18px;
+        }
+        .service-box li {
+            margin-bottom: 6px;
+        }
+
+        /* FLIP CARD */
         .flip-card {
             background-color: transparent;
             width: 300px;
@@ -98,10 +87,8 @@
             position: relative;
             width: 100%;
             height: 100%;
-            text-align: center;
             transition: transform 0.6s;
             transform-style: preserve-3d;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .flip-card:hover .flip-card-inner {
             transform: rotateY(180deg);
@@ -115,110 +102,162 @@
             padding: 1.5em;
         }
         .flip-card-front {
-            background-color: #4b5563; /* Darker gray for the front */
-            color: #e5e7eb;
+            background-color: #4b5563;
         }
         .flip-card-back {
-            background-color: #1f2937; /* Dark background for the back */
-            color: #e5e7eb;
+            background-color: #1f2937;
             transform: rotateY(180deg);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
         .blinking {
+            animation: blink 1.5s infinite;
             font-weight: bold;
-            animation: blinkingText 1.5s infinite;
         }
-        @keyframes blinkingText {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
+        @keyframes blink {
+            0% {opacity:0;}
+            50% {opacity:1;}
+            100% {opacity:0;}
         }
+
+        /* NETWORK LOGOS */
         .network-logos {
             display: flex;
             justify-content: space-around;
-            width: 100%;
-            max-width: 250px;
             margin: 10px 0;
         }
         .network-logos div {
             width: 45px;
             height: 45px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             border-radius: 8px;
-            color: #fff;
-            font-weight: bold;
             font-size: 0.8em;
+            font-weight: bold;
+            color: #fff;
         }
-        .network-mtn { background-color: #ffcc00; } /* MTN yellow */
-        .network-airtel { background-color: #ff0000; } /* Airtel red */
-        .network-glo { background-color: #32CD32; } /* Glo light green */
-        .network-9mobile { background-color: #008000; } /* 9mobile dark green */
-        .flip-card-back p {
-            margin: 5px 0;
-        }
+        .network-mtn { background-color: #ffcc00; color:#000; }
+        .network-airtel { background-color: #ff0000; }
+        .network-glo { background-color: #32CD32; }
+        .network-9mobile { background-color: #008000; }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header-container">
-            <h1>Welcome to MTech Concept Graphic Design Page</h1>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-container">
+        <h1>Welcome to MTech Concept</h1>
+        <p>Delivering Results & Smart Digital Support</p>
+    </div>
+
+    <!-- GRAPHIC DESIGN -->
+    <div class="content">
+        <p>
+            We offer professional graphic design services including logos,
+            flyers, banners, visual identities, invitation cards, and
+            custom brand designs.
+        </p>
+
+        <p>To get in touch 👇</p>
+        <a href="https://wa.link/3p6whp" class="get-in-touch">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+            Chat on WhatsApp
+        </a>
+    </div>
+
+    <!-- ADDITIONAL SERVICES -->
+    <div class="services-section">
+        <h2>Additional Virtual Assistant Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-box">
+                <h3>Admin Support</h3>
+                <ul>
+                    <li>Scheduling</li>
+                    <li>Email Management</li>
+                    <li>Document Preparation</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Data Entry</h3>
+                <ul>
+                    <li>Accurate Data Input</li>
+                    <li>Database Management</li>
+                    <li>Form Filling</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Business Support</h3>
+                <ul>
+                    <li>Research</li>
+                    <li>Project Coordination</li>
+                    <li>CRM Management</li>
+                    <li>Inventory Management</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Online Assistance</h3>
+                <ul>
+                    <li>Social Media Management</li>
+                    <li>Website Support</li>
+                    <li>Content Uploads</li>
+                </ul>
+            </div>
+
         </div>
-        <div class="content">
-            <p>
-                We offer a wide range of graphic design services, including logos, visual identities, flyers, banners, invitation cards, and any other design needs you may have.
-            </p>
-            <div class="click-here-section">
-                <p>To get in touch</p>
+    </div>
+
+    <!-- DATA SERVICES (RESTORED EXACTLY) -->
+    <div class="data-services-section">
+        <h2>Affordable Data Services for Growing Your Online Presence</h2>
+        <p>
+            In today’s digital world, staying connected is key to growing your business.
+            Whether you're looking to enhance your online presence or simply need a
+            reliable data source, we've got you covered. Our affordable data services
+            are designed to provide swift delivery and ease of access, ensuring your
+            business stays visible and connected.
+        </p>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <p>Enhance Your Business Visibility with Our Fast, Trusted, and Reliable Data Plans</p>
+                <p class="blinking">Click Here 👇</p>
+                <p class="blinking">"DATA PLUG"</p>
+            </div>
+
+            <div class="flip-card-back">
+                <p>Welcome! to MTech Concept Data Services.</p>
+
+                <div class="network-logos">
+                    <div class="network-mtn">MTN</div>
+                    <div class="network-airtel">Airtel</div>
+                    <div class="network-glo">Glo</div>
+                    <div class="network-9mobile">9mobile</div>
+                </div>
+
+                <p>To buy data, contact the seller:</p>
                 <p>Click here 👇</p>
-                <a href="https://wa.link/3p6whp" class="get-in-touch">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+
+                <a href="https://wa.link/3bdceg" class="get-in-touch">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
                     WhatsApp
                 </a>
             </div>
-            <div class="check-section">
-                <p>Check 👇</p>
-                <a href="https://www.facebook.com/profile.php?id=100083286065117" class="visibility-page">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo">
-                    Visibility Page 💡
-                </a>
-            </div>
-        </div>
-        <div class="data-services-section">
-            <h2>Affordable Data Services for Growing Your Online Presence</h2>
-            <p>
-                In today’s digital world, staying connected is key to growing your business. Whether you're looking to enhance your online presence or simply need a reliable data source, we've got you covered. Our affordable data services are designed to provide swift delivery and ease of access, ensuring your business stays visible and connected.
-            </p>
-        </div>
-        <!-- Flip Card Section -->
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <p>Enhance Your Business Visibility with Our Fast, Trusted, and Reliable Data Plans</p>
-                    <p class="blinking">Click Here 👇</p>
-                    <p class="blinking">"DATA PLUG"</p>
-                </div>
-                <div class="flip-card-back">
-                    <p>Welcome! to MTech Concept Data Services.</p>
-                    <div class="network-logos">
-                        <div class="network-mtn">MTN</div>
-                        <div class="network-airtel">Airtel</div>
-                        <div class="network-glo">Glo</div>
-                        <div class="network-9mobile">9mobile</div>
-                    </div>
-                    <p>To buy data, contact the seller:</p>
-                    <p>Click here 👇</p>
-                    <a href="https://wa.link/3bdceg" class="get-in-touch">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
-                        WhatsApp
-                    </a>
-                </div>
-            </div>
+
         </div>
     </div>
+
+</div>
+
 </body>
-</html>
+                </html>
+                    
