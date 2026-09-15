@@ -172,6 +172,57 @@
             .brand-logo { width: 70px; height: 70px; }
             .brand-tagline { font-size: 1.4em; }
         }
+
+        /* FACEBOOK CTA — GLOSSY BUTTON */
+        .facebook-cta-wrap {
+            margin: 0 0 1.5em 0;
+        }
+        .facebook-cta {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(180deg, #4267ff 0%, #1877f2 45%, #0f5fce 100%);
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.15em;
+            padding: 0.85em 1.8em;
+            border-radius: 50px;
+            box-shadow:
+                0 6px 14px rgba(24, 119, 242, 0.45),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            border: 1px solid #0f5fce;
+            animation: pulseGlow 2s infinite;
+            transition: transform 0.15s ease;
+        }
+        .facebook-cta:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0));
+            border-radius: 50px 50px 0 0;
+            pointer-events: none;
+        }
+        .facebook-cta:hover {
+            transform: translateY(-2px) scale(1.03);
+        }
+        .facebook-cta img {
+            width: 26px;
+            height: 26px;
+            vertical-align: middle;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 6px 14px rgba(24, 119, 242, 0.45), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -2px 4px rgba(0,0,0,0.25); }
+            50% { box-shadow: 0 6px 22px rgba(24, 119, 242, 0.85), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -2px 4px rgba(0,0,0,0.25); }
+            100% { box-shadow: 0 6px 14px rgba(24, 119, 242, 0.45), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -2px 4px rgba(0,0,0,0.25); }
+        }
     </style>
 </head>
 
@@ -187,6 +238,14 @@
         </div>
         <h1>Welcome to MTECH CONCEPT SOLUTIONS</h1>
     </div>
+
+    <div class="facebook-cta-wrap">
+        <a href="https://www.facebook.com/share/1D8yuBnzWQ/" class="facebook-cta" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            Follow Us on Facebook 👍
+        </a>
+    </div>
+
 <p>We design to clients' specifications or taste.
 📍 We deliver all-sized printed flyers, banners, and more to Zuba Abuja and its environs, Madalla down to Suleja and its environs.
 🌍 Other designs and digital delivery are available nationwide and internationally.</p>
