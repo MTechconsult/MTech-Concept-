@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
+        html, body {
+            overflow-x: hidden;
+        }
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #1f2937;
@@ -81,7 +87,8 @@
         /* FLIP CARD */
         .flip-card {
             background-color: transparent;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
             height: 200px;
             perspective: 1000px;
             margin: 2em auto;
@@ -224,7 +231,6 @@
             100% { box-shadow: 0 6px 14px rgba(24, 119, 242, 0.45), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -2px 4px rgba(0,0,0,0.25); }
         }
     </style>
-</head>
 
 <body>
 
@@ -246,12 +252,15 @@
         </a>
     </div>
 
-<p>We design to clients' specifications or taste.
-📍 We deliver all-sized printed flyers, banners, and more to Zuba Abuja and its environs, Madalla down to Suleja and its environs.
-🌍 Other designs and digital delivery are available nationwide and internationally.</p>
-</div>
- <p>We also deliver custom business and professional design solutions, including logos, ID cards, certificates, receipts, stamps, business documents, and other related design services.</p>
-</div>
+    <!-- WHO WE ARE / WHAT WE COVER -->
+    <div class="content">
+        <p>We design to clients' specifications or taste.
+        📍 We deliver all-sized printed flyers, banners, and more to Zuba Abuja and its environs, Madalla down to Suleja and its environs.
+        🌍 Other designs and digital delivery are available nationwide and internationally.</p>
+
+        <p>We also deliver custom business and professional design solutions, including logos, ID cards, certificates, receipts, stamps, business documents, and other related design services.</p>
+    </div>
+
     <!-- GRAPHIC DESIGN -->
     <div class="content">
         <p>
@@ -358,5 +367,4 @@
 </div>
 
 </body>
-    </html>
-    
+</html>
