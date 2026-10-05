@@ -260,7 +260,7 @@
         }
         .zoom-badge {
             position: absolute;
-            bottom: 8px;
+            top: 202px;
             right: 8px;
             background: rgba(0,0,0,0.6);
             color: #fff;
@@ -775,6 +775,9 @@
             text-align: center;
             line-height: 1.4;
         }
+
+        /* cards fit their own text instead of stretching to the tallest card */
+        .portfolio-scroll .portfolio-card { align-self: flex-start; }
     </style>
 
 <body>
