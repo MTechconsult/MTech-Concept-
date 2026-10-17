@@ -1,0 +1,19 @@
+{
+  "updatedAt": 1792275963934,
+  "hidden": [
+    "data-intro",
+    "data-plug"
+  ],
+  "data": {
+    "mode": "whatsapp",
+    "whatsapp": "https://wa.link/3bdceg",
+    "link": "https://abulinkdata.pages.dev/",
+    "waLabel": "WhatsApp",
+    "linkLabel": "Visit Our Data Website"
+  },
+  "pw": {
+    "salt": "5124b7f60b0a0666e618f5bce3a3cae5",
+    "iter": 150000,
+    "hash": "5d3f17f63b83f234632f52b7ab979a3af485deebadcd663c7d8340b9c825c882"
+  }
+}
